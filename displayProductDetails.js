@@ -12,11 +12,9 @@ export default class DisplayProductDetails extends LightningElement {
 @wire (getProdInfo,{caseId: '$recordId'})
 	wiredProducts({data, error}){
 		if(data) {
-            this.products = data;
-            console.log("CHECK@@2"+JSON.stringify(this.products));
+                   this.products = data;
 		}else if(error){
-			this.error = error;
-            console.log("CHECK@@3"+this.error);
+	           this.error = error;
 		}
 	}
 }
