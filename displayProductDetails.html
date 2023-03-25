@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Customer Product Information" class="product-info-container">
+        <div class="slds-p-horizontal_medium">
+        <span if:true={products} >
+            <table>
+                <tbody>
+                  <tr>
+                    <td>Product</td>
+                    <td>{products.Product}</td>
+                  </tr>
+                  <tr>
+                    <td>Home Country</td>
+                    <td>{products.HomeCountry}</td>
+                  </tr>
+                  <tr>
+                    <td>Cost per Calender Month</td>
+                    <td>{products.CostperCalenderMonth} {products.CurrencyCode}</td>
+                  </tr>
+                  <tr>
+                    <td>Atm Fee Percent</td>
+                    <td>{products.AtmFeePercent} %</td>
+                  </tr>
+                  <tr>
+                    <td>Card Replacement Cost</td>
+                    <td>{products.CardReplacementCost} {products.CurrencyCode}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </span>
+    </div>
+    </lightning-card>
+</template>
+
